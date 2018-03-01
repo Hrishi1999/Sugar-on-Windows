@@ -1,0 +1,10 @@
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\bin\Debug\Sugar on Windows.exe.config
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\bin\Debug\Sugar on Windows.exe
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\bin\Debug\Sugar on Windows.pdb
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar on Windows.csprojResolveAssemblyReference.cache
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar_on_Windows.Form1.resources
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar_on_Windows.Properties.Resources.resources
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar on Windows.csproj.GenerateResource.Cache
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar on Windows.csproj.CoreCompileInputs.cache
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar on Windows.exe
+C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\Debug\Sugar on Windows.pdb
