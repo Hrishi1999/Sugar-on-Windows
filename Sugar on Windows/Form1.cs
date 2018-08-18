@@ -97,6 +97,17 @@ bash -c -i sugar";
                 System.Diagnostics.Process.Start(textBox1.Text);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "powershell.exe";
+            startInfo.Arguments = @"bash -c -i sudo apt-get install sucrose
+echo 'export DISPLAY=:0.0' >> ~/.bashrc
+source ~/.bashrc";
+        }
     }
 
  }

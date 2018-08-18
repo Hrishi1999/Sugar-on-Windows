@@ -37,6 +37,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 95);
+            this.label2.Location = new System.Drawing.Point(12, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 17);
             this.label2.TabIndex = 3;
@@ -79,7 +81,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 143);
+            this.button3.Location = new System.Drawing.Point(15, 250);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(486, 33);
             this.button3.TabIndex = 4;
@@ -89,7 +91,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 115);
+            this.textBox1.Location = new System.Drawing.Point(15, 222);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(395, 22);
             this.textBox1.TabIndex = 5;
@@ -97,7 +99,7 @@
             // button4
             // 
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(12, 246);
+            this.button4.Location = new System.Drawing.Point(12, 353);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(487, 42);
             this.button4.TabIndex = 7;
@@ -107,7 +109,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(416, 112);
+            this.button5.Location = new System.Drawing.Point(416, 219);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(85, 25);
             this.button5.TabIndex = 8;
@@ -118,17 +120,38 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 226);
+            this.label3.Location = new System.Drawing.Point(12, 333);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(491, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "You will need to install a X Server for Windows like VcXsrv. Please refer docs\r\n";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Install Sucrose:";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 135);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(486, 33);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Install";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 295);
+            this.ClientSize = new System.Drawing.Size(514, 408);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -157,6 +180,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button6;
     }
 }
 
