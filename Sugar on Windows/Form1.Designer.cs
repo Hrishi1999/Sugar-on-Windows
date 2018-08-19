@@ -37,8 +37,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,9 +44,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 17);
+            this.label1.Size = new System.Drawing.Size(488, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enable/Disable Windows Subsystem for Linux (Need to run as admin)";
+            this.label1.Text = "Enable/Disable Windows Subsystem for Linux (Need to run as administrator)";
             // 
             // button1
             // 
@@ -62,7 +60,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(261, 41);
+            this.button2.Location = new System.Drawing.Point(267, 41);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 42);
             this.button2.TabIndex = 2;
@@ -73,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 202);
+            this.label2.Location = new System.Drawing.Point(12, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 17);
             this.label2.TabIndex = 3;
@@ -81,9 +79,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 250);
+            this.button3.Location = new System.Drawing.Point(15, 151);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(486, 33);
+            this.button3.Size = new System.Drawing.Size(492, 33);
             this.button3.TabIndex = 4;
             this.button3.Text = "Create";
             this.button3.UseVisualStyleBackColor = true;
@@ -91,7 +89,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 222);
+            this.textBox1.Location = new System.Drawing.Point(15, 123);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(395, 22);
             this.textBox1.TabIndex = 5;
@@ -99,9 +97,9 @@
             // button4
             // 
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(12, 353);
+            this.button4.Location = new System.Drawing.Point(12, 254);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(487, 42);
+            this.button4.Size = new System.Drawing.Size(495, 42);
             this.button4.TabIndex = 7;
             this.button4.Text = "Start Sugar";
             this.button4.UseVisualStyleBackColor = true;
@@ -109,9 +107,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(416, 219);
+            this.button5.Location = new System.Drawing.Point(417, 122);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 25);
+            this.button5.Size = new System.Drawing.Size(90, 25);
             this.button5.TabIndex = 8;
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
@@ -120,38 +118,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 333);
+            this.label3.Location = new System.Drawing.Point(9, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(491, 17);
+            this.label3.Size = new System.Drawing.Size(509, 17);
             this.label3.TabIndex = 9;
-            this.label3.Text = "You will need to install a X Server for Windows like VcXsrv. Please refer docs\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 17);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Install Sucrose:";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(13, 135);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(486, 33);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Install";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.label3.Text = "You will need to install VcXrsv before starting Sugar. Please refer docs for more" +
+    "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 408);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(519, 307);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -161,7 +139,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(537, 354);
+            this.MinimumSize = new System.Drawing.Size(537, 354);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Sugar on Windows";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -180,8 +162,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button6;
     }
 }
 

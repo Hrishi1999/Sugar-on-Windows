@@ -37,7 +37,7 @@ namespace Sugar_on_Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            enable_disable(true);       
+            enable_disable(true);
         }
 
         private void enable_disable(bool response)
@@ -72,7 +72,7 @@ namespace Sugar_on_Windows
             {
                 if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
-                    textBox1.Text = folderDialog.SelectedPath + "\\sugar.bat"; 
+                    textBox1.Text = folderDialog.SelectedPath + "\\sugar.bat";
                 }
             }
         }
@@ -80,7 +80,7 @@ namespace Sugar_on_Windows
         private void button3_Click(object sender, EventArgs e)
         {
             String data = @"cd C:\Windows\System32\powershell.exe 
-bash -c -i sugar";
+bash -c -i 'DISPLAY=:0 sugar'";
 
             TextWriter txt = new StreamWriter(textBox1.Text);
             txt.Write(data);
@@ -97,17 +97,6 @@ bash -c -i sugar";
                 System.Diagnostics.Process.Start(textBox1.Text);
             }
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            startInfo.FileName = "powershell.exe";
-            startInfo.Arguments = @"bash -c -i sudo apt-get install sucrose
-echo 'export DISPLAY=:0.0' >> ~/.bashrc
-source ~/.bashrc";
-        }
-    }
-
+    
+    } 
  }
