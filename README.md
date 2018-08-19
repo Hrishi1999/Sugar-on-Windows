@@ -18,7 +18,7 @@
   * And finally, ``` source ~/.bashrc ```
 
 * Then, create a batch file (which could also work as a shortcut to launch without app). 
-* Click on "Start Sugar", if nothing goes wrong, a windows will open and you can use Sugar on Windows
+* Click on "Start Sugar", if nothing goes wrong, a windows will open and you can use Sugar on Windows (it might take a few starts sometimes, it will be fixed)
 
 ## Requirments
 
