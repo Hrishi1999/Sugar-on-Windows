@@ -19,3 +19,10 @@
 * Windows 10 x64 Fall Creators Update
 * .NET Framework 4.6.x
 * WSL installed
+* 
+## Known Issues
+
+* ##### Browse fails to start
+* ##### Solution : Install ```sudo apt-get install gir1.2-webkit2-4.0```
+
+
