@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -42,23 +43,15 @@ namespace Sugar_on_Windows
 
         private void enable_disable(bool response)
         {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            startInfo.FileName = "powershell.exe";
             if (response)
             {
-                startInfo.Arguments = "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux";
-                MessageBox.Show("Feature enabled");
+                runCommand("Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux",
+                1);
             }
             else
             {
-                startInfo.Arguments = "Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux";
-                MessageBox.Show("Feature disabled");
-
+                runCommand("Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux", 1);
             }
-            process.StartInfo = startInfo;
-            process.Start();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -93,10 +86,53 @@ bash -c -i 'DISPLAY=:0 sugar'";
         {
             if (textBox1.Text != "")
             {
-                System.Diagnostics.Process.Start(@"config.xlaunch");
-                System.Diagnostics.Process.Start(textBox1.Text);
+                Process.Start(@"config.xlaunch");
+                Process.Start(textBox1.Text);
             }
         }
-    
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            runCommand("sudo apt-get install sucrose", 0);
+            runCommand("echo 'export DISPLAY=:0.0' >> ~/.bashrc", 0);
+            runCommand("echo 'export LIBGL_ALWAYS_INDIRECT=1' >> ~/.bashrc", 0);
+        }
+
+        private void runCommand(String command, int cli) //0 for bash, 1 for powershell
+        {
+            String fname = "";
+
+            switch (cli)
+            {
+                case 0:
+                    fname = @"C:\Windows\System32\bash";
+                    break;
+                case 1:
+                    fname = @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe";
+                    break;
+            }
+
+            var psi = new ProcessStartInfo
+            {
+                FileName = fname,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                Arguments = string.Format("-c \"{0} \"", command)
+            };
+
+            using (var p = Process.Start(psi))
+            {
+                if (p != null)
+                {
+                    var strOutput = p.StandardOutput.ReadToEnd();
+                    p.WaitForExit();
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button4.Enabled = true;
+        }
     } 
  }

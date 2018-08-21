@@ -7,4 +7,3 @@ C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\x64\Release\Su
 C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\x64\Release\Sugar on Windows.csproj.CoreCompileInputs.cache
 C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\x64\Release\Sugar on Windows.exe
 C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\x64\Release\Sugar on Windows.pdb
-C:\Users\hrish\source\repos\Sugar on Windows\Sugar on Windows\obj\x64\Release\Sugar on Windows.csprojResolveAssemblyReference.cache

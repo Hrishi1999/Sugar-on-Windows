@@ -37,6 +37,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -44,9 +47,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(488, 17);
+            this.label1.Size = new System.Drawing.Size(504, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enable/Disable Windows Subsystem for Linux (Need to run as administrator)";
+            this.label1.Text = "1. Enable/Disable Windows Subsystem for Linux (Need to run as administrator)";
             // 
             // button1
             // 
@@ -71,15 +74,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 103);
+            this.label2.Location = new System.Drawing.Point(12, 206);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 17);
+            this.label2.Size = new System.Drawing.Size(434, 34);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Create Desktop Shortcut";
+            this.label2.Text = "4. Create Desktop Shortcut (or paste last location of batch file here)\r\n\r\n";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 151);
+            this.button3.Location = new System.Drawing.Point(15, 254);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(492, 33);
             this.button3.TabIndex = 4;
@@ -89,15 +92,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 123);
+            this.textBox1.Location = new System.Drawing.Point(15, 226);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(395, 22);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
             // 
             this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(12, 254);
+            this.button4.Location = new System.Drawing.Point(15, 328);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(495, 42);
             this.button4.TabIndex = 7;
@@ -107,10 +111,12 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(417, 122);
+            this.button5.AccessibleDescription = "";
+            this.button5.Location = new System.Drawing.Point(416, 225);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(90, 25);
             this.button5.TabIndex = 8;
+            this.button5.Tag = "";
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -118,18 +124,53 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 234);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F);
+            this.label3.Location = new System.Drawing.Point(12, 308);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(509, 17);
+            this.label3.Size = new System.Drawing.Size(487, 16);
             this.label3.TabIndex = 9;
-            this.label3.Text = "You will need to install VcXrsv before starting Sugar. Please refer docs for more" +
-    "";
+            this.label3.Text = "5. You will need to install VcXrsv before starting Sugar. Please refer docs for m" +
+    "ore";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(15, 150);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(495, 42);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Install Sucrose";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            this.label4.Location = new System.Drawing.Point(12, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(501, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "3. Install Sucrose on WSL, and add display paramters (Don\'t repeat if done alread" +
+    "y)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            this.label5.Location = new System.Drawing.Point(12, 97);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(399, 16);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "2. Install a Linux distribution from Windows Store (Ubuntu preferred)";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 307);
+            this.ClientSize = new System.Drawing.Size(519, 381);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -140,10 +181,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(537, 354);
-            this.MinimumSize = new System.Drawing.Size(537, 354);
+            this.MaximumSize = new System.Drawing.Size(537, 428);
+            this.MinimumSize = new System.Drawing.Size(537, 428);
             this.Name = "Form1";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sugar on Windows";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -162,6 +204,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
